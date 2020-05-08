@@ -1,0 +1,4 @@
+node_modules
+yarn.lock
+src/uploads/*
+!src/uploads/.gitkeep
