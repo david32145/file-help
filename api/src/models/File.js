@@ -19,11 +19,17 @@ class File extends Model {
       description: {
         type: DataTypes.TEXT
       },
-      file_path: {
+      file_name: {
         type: DataTypes.STRING,
         allowNull: false
-      }
+      },
+      uri: DataTypes.STRING
     }, {
+      hooks: {
+        beforeCreate: (file) => {
+          file.uri = `${process.env.SERVER_URI}/download/${file.file_name}`
+        }
+      },
       sequelize,
       tableName: "files"
     })

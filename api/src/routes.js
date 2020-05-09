@@ -4,11 +4,8 @@ const routes = Router()
 
 const FileController = require("./controllers/FileController")
 
-routes.get("/", (req, res) => {
-  return res.send("ok")
-})
-
 routes.post("/files", FileController.store)
 routes.get("/files", FileController.index)
+routes.delete("/files/:id", FileController.destroy)
 
 module.exports = routes

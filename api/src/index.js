@@ -8,5 +8,5 @@ app.listen(PORT, function(err) {
     console.error(err)
     return
   }
-  console.log("Sever is running")
+  console.log("Server is running")
 })

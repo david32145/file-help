@@ -16,19 +16,14 @@ module.exports = {
         type: DataTypes.STRING,
         allowNull: false
       },
-      description: {
-        type: DataTypes.TEXT
-      },
-      file_path: {
+      description: DataTypes.TEXT,
+      file_name: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      createdAt: {
-        type: DataTypes.DATE
-      },
-      updatedAt: {
-        type: DataTypes.DATE
-      },
+      uri: DataTypes.STRING,
+      createdAt: DataTypes.DATE,
+      updatedAt: DataTypes.DATE,
     });
   },
   down: (queryInterface) => {
