@@ -66,17 +66,15 @@ In the app was used an stack `javascript`, with `nodejs` in backend and `react-n
 
 ## 🏘️ Examples
 
-<div style="display: flex; flex-direction: row; align-itens: center;justify-content: space-between;height: 550px">
-  <h1 align="center">
-    <img alt="Screenshot" src="./assets/screenshot1.png"/>
-  </h1>
-  <h1 align="center">
-    <img alt="Screenshot" src="./assets/screenshot2.png"/>
-  </h1>
-  <h1 align="center">
-    <img alt="Screenshot" src="./assets/screenshot3.png"/>
-  </h1>
-</div>
+<h1 align="left">
+  <img alt="Screenshot" src="./assets/screenshot1.png"/>
+</h1>
+<h1 align="left">
+  <img alt="Screenshot" src="./assets/screenshot2.png"/>
+</h1>
+<h1 align="left">
+  <img alt="Screenshot" src="./assets/screenshot3.png"/>
+</h1>
 
 ## 🎥 How Usage
 
