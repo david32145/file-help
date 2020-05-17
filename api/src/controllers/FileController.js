@@ -11,6 +11,7 @@ module.exports = {
    * @param {Response} res 
    */
   async store(req, res) {
+    req.on('data', value => console.log(value.toString()))
     const file_name = await singleUpload("file", req, res)
     const data = req.body
     const file = await FileModel.create({

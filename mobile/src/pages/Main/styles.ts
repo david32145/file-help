@@ -1,0 +1,90 @@
+import {StyleSheet, Dimensions} from 'react-native';
+
+const {height: viewHeight, width: viewWidth} = Dimensions.get('screen');
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#6B26BB',
+    position: 'relative',
+    flexDirection: 'column-reverse',
+  },
+  search: {
+    width: 50,
+    height: 50,
+    position: 'absolute',
+    backgroundColor: 'rgba(255, 255, 255, 0.25)',
+    borderRadius: 10,
+    top: 30,
+    left: 14,
+    zIndex: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fileBox: {
+    position: 'relative',
+    height: viewHeight * 0.6,
+    width: '100%',
+    backgroundColor: '#FFF',
+    borderTopLeftRadius: 55,
+    borderTopRightRadius: 55,
+    elevation: 5,
+    paddingTop: 40,
+  },
+  svgContainer: {
+    flex: 1,
+  },
+  mainText: {
+    position: 'absolute',
+    top: viewHeight * 0.4 * 0.35,
+    left: 14 + 25,
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#FFF',
+    letterSpacing: 0.02,
+  },
+  secondaryText: {
+    position: 'absolute',
+    top: viewHeight * 0.4 * 0.35 + 40,
+    left: 14 + 25,
+    fontSize: 18,
+    fontWeight: '400',
+    width: 200,
+    color: '#FFF',
+    letterSpacing: 0.02,
+  },
+  fileBoxDecorator: {
+    width: 60,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: '#6B26BB',
+    opacity: 0.5,
+    position: 'absolute',
+    top: 10,
+    left: viewWidth * 0.5 - 30,
+  },
+  fileBoxHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 40,
+  },
+  fileBoxHeaderTitle: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#000',
+    letterSpacing: 0.04,
+  },
+  buttonNewFile: {
+    width: 50,
+    height: 50,
+    backgroundColor: '#E7395E',
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  list: {
+    flex: 1,
+    marginTop: 5,
+  },
+});
