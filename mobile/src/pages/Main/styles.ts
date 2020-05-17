@@ -87,4 +87,36 @@ export default StyleSheet.create({
     flex: 1,
     marginTop: 5,
   },
+  modalContainer: {
+    width: viewWidth * 0.9,
+    maxWidth: 350,
+    backgroundColor: '#FFF',
+    padding: 30,
+    borderRadius: 40,
+    flexDirection: 'column',
+  },
+  modal: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textModalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  textInputModalTitle: {
+    fontSize: 16,
+  },
+  buttonGroup: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  button: {
+    minWidth: 30,
+    paddingHorizontal: 10,
+    height: 30,
+    borderRadius: 4,
+    marginLeft: 5,
+    backgroundColor: '#FFF',
+  },
 });

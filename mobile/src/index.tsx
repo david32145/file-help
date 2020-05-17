@@ -3,6 +3,8 @@ import {StatusBar} from 'react-native';
 
 import 'react-native-gesture-handler';
 
+import FileProvider from './files';
+
 import AppRoutes from './routes';
 
 const Application: React.FC = () => {
@@ -13,7 +15,9 @@ const Application: React.FC = () => {
         backgroundColor="transparent"
         translucent
       />
-      <AppRoutes />
+      <FileProvider>
+        <AppRoutes />
+      </FileProvider>
     </>
   );
 };

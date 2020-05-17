@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from 'react';
+import React, {useState, useMemo, useEffect} from 'react';
 import {
   View,
   Dimensions,
@@ -13,8 +13,7 @@ import {Svg, Rect} from 'react-native-svg';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import DocumentPicker from 'react-native-document-picker';
-
-import api from '../../services/api';
+import {useAddFile, useFileClearError, useFileHasError} from '../../files';
 
 const {width: viewWidth, height: viewHeight} = Dimensions.get('screen');
 
@@ -33,6 +32,10 @@ const NewFile: React.FC = () => {
   const [picker, setPicker] = useState<Picker | undefined>();
   const [label, setLabel] = useState('');
 
+  const addFile = useAddFile();
+  const error = useFileHasError();
+  const clearError = useFileClearError();
+
   const labels = useMemo(() => {
     if (label.trim() === '') {
       return [];
@@ -40,6 +43,13 @@ const NewFile: React.FC = () => {
     return label.split(',').map((str) => str.trim());
   }, [label]);
   const navigation = useNavigation();
+
+  useEffect(() => {
+    if (error) {
+      console.error('an error ocurred');
+      clearError();
+    }
+  }, [error, clearError]);
 
   function handlerGoBack(): void {
     navigation.goBack();
@@ -72,11 +82,7 @@ const NewFile: React.FC = () => {
         data.append('title', name);
         data.append('description', description);
         data.append('labels', label);
-        await api.post('/files', data, {
-          headers: {
-            'Content-Type': 'multipart/form-data; charset=utf-8;',
-          },
-        });
+        addFile(data);
         navigation.goBack();
       }
     } catch (err) {
