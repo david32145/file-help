@@ -25,7 +25,7 @@ an list of labels;
 - The _user_ can search by title, description or tag in an unique field;
 - The _user_ can open your file in browser.
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 In the app was used an stack `javascript`, with `nodejs` in backend and `react-native` in mobile.
 
