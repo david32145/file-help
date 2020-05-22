@@ -15,7 +15,7 @@
 David Nascimento
 
 - [Github](https://github.com/david32145)
-- [Email](nascimento32145@gmail.com)
+- [Email](mail:nascimento32145@gmail.com)
 
 ## 🚶 User Stories
 
